@@ -10,4 +10,9 @@
   num2 = 23;
   //console.log(num2)
 
+
+  let a =20;
+  let a=30 
+  // this is not possible 
+
   // we cannot reassign the const value 
