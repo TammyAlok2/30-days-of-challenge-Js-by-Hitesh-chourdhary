@@ -5,5 +5,8 @@ let evenOdd = (num)=>{
 }
 //evenOdd(5)
 
-// using high order function 
+// using high order function : map , filter and reduce are high order function 
 
+let newNumber = ()=>{
+
+}
