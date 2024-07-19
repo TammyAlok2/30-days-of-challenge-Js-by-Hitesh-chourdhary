@@ -112,3 +112,29 @@
 
   console.log(library)
   console.log(library.Books[0].name)
+
+   // ACITIVITY : 4 : THE THIS KEYBOARD 
+   // TASK 7: add a method to the book that uses the this keyword to return teh string with the book's title and year , and log the result of calling this method 
+   const books1 ={
+    "name":"The journey of India",
+    "author":"Alok Tamrakar",
+    "year":'2028',
+    getBookInfo: function(){
+      return (`${this.name} by ${this.author} in ${this.year}`)
+    }
+
+   }
+   console.log(books1.getBookInfo())
+
+   // ACTIVITY 5 : OBJECT ITERATION 
+     // TASK 8: USE A  for in loop to iterate over teh properties of the book and each property and its value 
+     for (const key in books1) {
+      if (Object.hasOwnProperty.call(books1, key)) {
+        const element = books1[key];
+        console.log(element)
+        
+      }
+     }
+
+     // task 9 : Use object.keys and object.values method to log all the keys adn values of the book object 
+      Object.keys()// to learn 
