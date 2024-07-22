@@ -1,0 +1,72 @@
+/**************************************DAY 9 : DOM MANIPULATION **********************/
+ACTITVITY 1 : SELECTIONG AND MANIPULATING ELEMENTS
+  
+<!--TASK 1: Selecting an HTML element by its ID and change its content -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <h1 id="head1">This is heading 1 </h1>
+    <h2 class="head2" style="background-color: red;">This is heading 2 </h2>
+
+    <script>
+        let heading1 = document.getElementById('head1')
+        heading1.innerHTML= "Hello World"
+
+        let heading2 = document.getElementsByClassName('head2')
+        //heading2.style.backgroundColor= "green"
+
+        let heading3 = document.createElement('h1')
+        heading3.innerText = "This is new element"
+    document.body.appendChild(heading3)
+    document.body.appendChild(heading3)
+        heading1.appendChild('heading3')
+    </script>
+</body>
+</html>
+
+<html>
+<body>
+<h1>The Element Object</h1>
+<h2>The appendChild() Method</h2>
+
+<ul id="myList">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul>
+
+<p>Click "Append" to append an item to the end of the list:</p>
+
+<button onclick="myFunction()">Append</button>
+
+<script>
+function myFunction() {
+
+// Create an "li" node:
+const node = document.createElement("li");
+
+// Create a text node:
+const textnode = document.createTextNode("Water");
+
+// Append the text node to the "li" node:
+node.appendChild(textnode);
+
+// Append the "li" node to the list:
+document.getElementById("myList").appendChild(node);
+}
+</script>
+
+</body>
+</html>
+
+<!--Task 2: Select an Html element by its class and change its background color-->
+
+// ACTITVITY 2 : CREATING AND APPENDING ELEMENTS 
+<!--tASK 3 : Create a new div element with some context and append it to the boody -->
