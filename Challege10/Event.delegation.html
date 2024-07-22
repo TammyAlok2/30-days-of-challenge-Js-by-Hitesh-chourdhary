@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .faq-section {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .faq-item {
+            margin-bottom: 10px;
+            border: 1px solid #007BFF;
+            padding: 10px;
+        }
+        
+        .faq-toggle {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        .faq-answer {
+            display: none;
+            margin: 5px 0 0 0;
+            font-size: 14px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="faq-section">
+        <div class="faq-item">
+            <button class="faq-toggle">Toggle</button>
+            <p class="faq-question">What is your return policy?</p>
+            <p class="faq-answer">Our return policy lasts 30 days...</p>
+        </div>
+        <div class="faq-item">
+            <button class="faq-toggle">Toggle</button>
+            <p class="faq-question">How do I track my order?</p>
+            <p class="faq-answer">You can track your order using...</p>
+        </div>
+        <div class="faq-item">
+            <button class="faq-toggle">Toggle</button>
+            <p class="faq-question">Do you ship internationally?</p>
+            <p class="faq-answer">Yes, we ship to over 100 countries...</p>
+        </div>
+    </div>
+    <script>document.addEventListener('DOMContentLoaded', function() {
+        const faqSection = document.querySelector('.faq-section');
+    
+        faqSection.addEventListener('click', function(event) {
+            if (event.target.classList.contains('faq-toggle')) {
+                const faqItem = event.target.closest('.faq-item');
+                const answer = faqItem.querySelector('.faq-answer');
+                answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+            }
+        });
+    });
+    </script>
+</body>
+</html>

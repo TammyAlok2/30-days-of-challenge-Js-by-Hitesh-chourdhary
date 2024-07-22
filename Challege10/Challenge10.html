@@ -1,0 +1,104 @@
+/**********************Day :10 Event Handling  ***********/
+
+// ACTIVITY : 1 : BASIC EVENT HANDLING 
+ // Task 1  : Add a event listener to a button that changes the text content of a paragrapy
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <!-- Task 1 : -->
+     <p id="p1">Hey Ankita love you </p>
+     <button id="btn1" onclick="task1()">Submit</button>
+
+     <!--Task 2 : Add a double -click event listener to an image that toggles its visibility -->
+     <img src="https://avatars.githubusercontent.com/u/109581769?v=4" style="visibility: hidden;" id="img"/> 
+     <button id="btn2" ondblclick="task2()">Double Click me</button>
+
+     //ACTITVITY 2 : Mouse Events 
+     <!--Task 3 : Add a mouseover event listener to an element that chagnges its background color-->
+     <!--Task 4 : Add a mouseout event listener to an element that resets its background color -->
+
+
+     // ACTITVITY 3 : KEYBOARD EVENTS 
+      <!-- Task 5 : Add a keydown event listener to an input fields that logs the keypressed to console-->
+      <!-- Task 6 : Add a key up event listener to an input field that displays the current value in the paragraph -->
+      <div style="background-color: red;width:100px;height:100px;" id="task3" onmouseover="task3()" onmouseout="task4()">hello </div>
+    <input type="text" id="task5" onkeydown="task5()">
+    <p id="task5a"></p>
+    <input type="text" id="task6" onkeyup="task6()">
+    <p id="task6a"></p>
+
+
+    // ACTITVITY 4 : FORM EVENTS 
+        
+    <!-- Task 7 : Add a submit event listener to a form that prevents the default the submission and logs the form data to console-->
+    <!--Task 8 : Add a change event listener to a select dropdown that displays the selected value to paragrap h -->
+    <form action="" onsubmit="task7()">
+          <div style="display: flex; flex-direction:column; width:100px">
+            Name : <input type="text" id="name">
+            lover Name: <input type="text" id ="loverName">
+            <button type="submit">Submit</button>
+          </div>
+         </form>
+
+         <select name="Choose my love " id="chooseLove" onchange="task8()">
+            <option value="I love Ankita">I love Ankita</option>
+            <option value="I love BholeNath">I love BholeNath</option>
+            <option value="I love Shiva">I love Shiva </option>
+         </select>
+         <p id="task8a"></p>
+
+         // ACTITVITY 5 : EVENT DELAGATIONS 
+         <!--Task 9 : Add a click event listener to a list that logs the text content of the clicked list item using event delagation -->
+         
+     <script>
+         function task1(){
+            document.getElementById("p1").innerHTML="Hello Love you Bholenath"
+         }
+         function task2(){
+            let img = document.getElementById("img");
+            if(img.style.visibility=="hidden"){
+                img.style.visibility="visible";
+
+            }
+            else {
+                img.style.visibility ="hidden";
+            }
+
+         }
+         function task3(){
+document.getElementById('task3').style.backgroundColor="green";
+         }
+         function task4(){
+            document.getElementById('task3').style.backgroundColor="red";
+                     }
+
+          function task5(){
+              let value = document.getElementById("task5").value;
+              document.getElementById("task5a").innerHTML=value;
+              
+          }           
+          function task6(){
+            let value = document.getElementById("task6").value;
+              document.getElementById("task6a").innerHTML=value;
+          }
+
+          function task7(){
+            event.preventDefault();
+            let name = document.getElementById("name").value;
+            let loverName = document.getElementById("loverName").value;
+            console.table([name,loverName])
+          }
+          function task8(){
+            let value = document.getElementById("chooseLove").value;
+            document.getElementById("task8a").innerHTML=value;
+          }
+     </script>
+ </body>
+ </html> 
+
