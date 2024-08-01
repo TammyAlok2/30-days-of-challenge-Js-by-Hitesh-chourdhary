@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hi
+    <form onsubmit="submit()">
+        name: <input type="text" name="name" id="name">
+        email : <input type="text" name="email" id="email">
+        <button type="submit">Login</button>
+    </form>
+    <script src="challenge20.js"></script>
+    <script>
+          // TASK 3 : cREATE A SIMPLE FORM THAT SAVES USER INPUT (eg. name and email ) to localstorage when submitter . retrieve adn display the saved data on page load
+const submit =(e)=>{
+e.preventDefault();
+console.log(e)
+
+}
+    </script>
+</body>
+</html>
